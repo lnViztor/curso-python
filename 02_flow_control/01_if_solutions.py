@@ -5,6 +5,14 @@
 # Ejercicio 1: Determinar el mayor de dos números
 # Pide al usuario que introduzca dos números y muestra un mensaje
 # indicando cuál es mayor o si son iguales
+from os import system
+
+# system() nos permite ejecutar un comando en la terminal.
+# En este caso, lo hacemos para limpiar la pantalla tanto
+# en MacOS/Linux usando "clear" como en Windows con "cls"
+if system("clear") != 0: system("cls")
+
+
 print("\nEjercicio 1:")
 num1 = int(input("Introduce el primer número: "))
 num2 = int(input("Introduce el segundo número: "))
