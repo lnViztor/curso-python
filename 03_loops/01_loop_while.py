@@ -1,3 +1,12 @@
+# pylint: disable=W0311
+# pylint: disable=W0120
+# pylint: disable=W0120
+# pylint: disable=C0103
+# pylint: disable=C0321
+# pylint: disable=C0301
+# pylint: disable=C0114
+# pylint: disable=C0304
+
 ###
 # 01 - Bucles (while)
 # Permiten ejecutar un bloque de código repetidamente mientras se cumpla una condición
@@ -71,7 +80,7 @@ while numero < 0:
     numero = int(input("Escribe un número positivo: "))
     if numero < 0:
       print("El número debe ser positivo. Intenta otra vez, majo o maja.")
-  except:
+  except ValueError:
     print("Lo que introduces debe ser un número, que si no peta!")
 
 print(f"El número que has introducido es {numero}")
@@ -89,12 +98,31 @@ while contador > 0:
     contador -= 1
 print("¡Despegue!")# Ejercicio 1: Cuenta atrás
 print("\nEjercicio 1:")
-   
 
 
 # Ejercicio 2: Suma de números pares (while)
 # Calcula la suma de los números pares entre 1 y 20 (inclusive) usando un bucle while.
 print("\nEjercicio 2:")
+# Inicializa la variable de suma
+suma = 0
+# Inicializa el contador
+contador = 1
+# El usuario introduce el numero
+numero = int(input("Escribe un número positivo: "))
+# Bucle while para recorrer los números del 1 al 20
+while contador <= numero:
+    # Verifica si el número es par
+    if contador % 2 == 0:
+        #Muestra el número par
+        print(f"El número par es: {contador}")
+        # Suma el número par a la variable de suma
+        suma += contador
+    # Incrementa el contador
+    contador += 1
+# Imprime la suma total
+print(f"La suma de los números pares entre 1 y {numero} es: {suma}")
+
+
 
 # Ejercicio 3: Factorial de un número
 # Pide al usuario que introduzca un número entero positivo.
@@ -102,6 +130,27 @@ print("\nEjercicio 2:")
 # El factorial de un número entero positivo es el producto de todos los números del 1 al ese número. Por ejemplo, el factorial de 5
 # 5! = 5 x 4 x 3 x 2 x 1 = 120.
 print("\nEjercicio 3:")
+# Inicializa la variable de factorial
+factorial = 1
+# Inicializa el contador
+contador = 1
+# El usuario introduce el numero
+numero = int(input("Escribe un número positivo: "))
+# Bucle while para calcular el factorial
+while contador <= numero:
+    # Verifica si el número es positivo
+    if numero < 0:
+        print("El número debe ser positivo. Intenta otra vez, majo o maja.")
+        break
+    #Pinta la operación
+    print(f"{factorial} * {contador} = {factorial * contador}")
+    # Multiplica el factorial por el contador
+    factorial *= contador
+    # Incrementa el contador
+    contador += 1
+# Imprime el resultado
+print(f"El factorial de {numero} es: {factorial}")
+
 
 # Ejercicio 4: Validación de contraseña
 # Pide al usuario que introduzca una contraseña.
