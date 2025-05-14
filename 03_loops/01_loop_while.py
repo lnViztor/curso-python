@@ -6,6 +6,8 @@
 # pylint: disable=C0301
 # pylint: disable=C0114
 # pylint: disable=C0304
+# pylint: disable=C0303
+# pylint: disable=C2401
 
 ###
 # 01 - Bucles (while)
@@ -158,13 +160,57 @@ print(f"El factorial de {numero} es: {factorial}")
 # Usa un bucle while para seguir pidiendo la contraseña hasta que cumpla con los requisitos.
 # Si la contraseña es válida, imprime "Contraseña válida".
 print("\nEjercicio 4:")
+# Inicializa la variable de contraseña
+contraseña = ""
+# Bucle while para validar la contraseña
+while len(contraseña) < 8:
+    # Pide al usuario que introduzca una contraseña
+    contraseña = input("Introduce una contraseña (mínimo 8 caracteres): ")
+    # Verifica si la contraseña es válida
+    if len(contraseña) < 8:
+        print("La contraseña debe tener al menos 8 caracteres. Intenta otra vez.")
+    else:
+        print("Contraseña válida")
+        
 
 # Ejercicio 5: Tabla de multiplicar
 # Pide al usuario que introduzca un número.
 # Imprime la tabla de multiplicar de ese número (del 1 al 10) usando un bucle while.
 print("\nEjercicio 5:")
+# Inicializa el contador
+contador = 1
+# El usuario introduce el numero
+numero = int(input("Escribe un número para ver su tabla de multiplicar: "))
+# Bucle while para imprimir la tabla de multiplicar
+while contador <= 10:
+    # Imprime la multiplicación
+    print(f"{numero} x {contador} = {numero * contador}")
+    # Incrementa el contador
+    contador += 1
 
 # Ejercicio 6: Números primos hasta N
 # Pide al usuario que introduzca un número entero positivo N.
 # Imprime todos los números primos menores o iguales que N usando un bucle while.
+#Definición de número primo: Un número primo es un número natural mayor que 1 que 
+# no tiene divisores positivos más que 1 y sí mismo.
 print("\nEjercicio 6:")
+# Inicializa el contador
+contador = 2
+# El usuario introduce el numero
+numero = int(input("Escribe un número positivo: "))
+# Bucle while para imprimir los números primos  
+while contador <= numero:
+    # Inicializa la variable de primo
+    primo = True
+    # Bucle para verificar si el número es primo
+    divisor = 2
+    while divisor < contador:
+        if contador % divisor == 0:
+            primo = False
+            break
+        divisor += 1
+    # Imprime el número primo
+    if primo:
+        print(contador)
+    # Incrementa el contador
+    contador += 1
