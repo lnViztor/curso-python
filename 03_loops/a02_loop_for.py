@@ -1,3 +1,16 @@
+# pylint: disable=W0311
+# pylint: disable=W0120
+# pylint: disable=W0120
+# pylint: disable=C0103
+# pylint: disable=C0321
+# pylint: disable=C0301
+# pylint: disable=C0114
+# pylint: disable=C0304
+# pylint: disable=C0303
+# pylint: disable=C2401
+
+
+
 ###
 # 02 - Bucles (for)
 # Permiten ejecutar un bloque de código repetidamente mientras ITERA un iterable o una lista
@@ -52,7 +65,7 @@ for idx, animal in enumerate(animales):
 # Comprensión de listas (list comprehension)
 animales = ["perro", "gato", "raton", "loro", "pez", "canario"]
 animales_mayus = [animal.upper() for animal in animales]
-print(animales_mayus)
+print(animales_mayus) 
 
 # Muestra los números pares de una lista
 pares = [num for num in [1, 2, 3, 4, 5, 6] if num % 2 == 0]
@@ -65,6 +78,13 @@ print(pares)
 # Ejercicio 1: Imprimir números pares
 # Imprime todos los números pares del 2 al 20 (inclusive) usando un bucle for.
 print("\nEjercicio 1:")
+# Dado el siguiente rango de números:
+# numeros = range(2, 21)
+# Imprime todos los números pares del 2 al 20 (inclusive) usando un bucle for.
+# Puedes usar el operador módulo (%) para verificar si un número es par.
+for numero in range(2, 21):
+  if numero % 2 == 0:
+    print(numero)
 
 # Ejercicio 2: Calcular la media de una lista
 # Dada la siguiente lista de números:

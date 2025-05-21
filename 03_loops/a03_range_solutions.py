@@ -1,3 +1,15 @@
+# pylint: disable=W0311
+# pylint: disable=W0120
+# pylint: disable=W0120
+# pylint: disable=C0103
+# pylint: disable=C0321
+# pylint: disable=C0301
+# pylint: disable=C0114
+# pylint: disable=C0304
+# pylint: disable=C0303
+# pylint: disable=C2401
+
+
 ###
 # EJERCICIOS (range)
 ###
