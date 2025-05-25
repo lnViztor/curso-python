@@ -1,3 +1,18 @@
+# pylint: disable=W0311
+# pylint: disable=W0120
+# pylint: disable=W0120
+# pylint: disable=C0103
+# pylint: disable=C0321
+# pylint: disable=C0301
+# pylint: disable=C0114
+# pylint: disable=C0304
+# pylint: disable=C0303
+# pylint: disable=C2401
+# pylint: disable=C0116
+# pylint: disable=W0621
+
+
+
 """
 Tienes dos listas de números, lista_a y lista_b, ambas de la misma longitud. 
 
@@ -49,7 +64,7 @@ def battle(lista_a, lista_b):
     return f"{puntos_a - puntos_b}a" if puntos_a > puntos_b else f"{puntos_b - puntos_a}b" if puntos_b > puntos_a else "x"
 
 
-lista_a = [4, 4, 4]
-lista_b = [2, 8, 2]
+lista_a = [6, 6, 6]
+lista_b = [6, 6, 6]
 winner = battle(lista_a, lista_b)
 print(winner)

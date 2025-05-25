@@ -29,25 +29,28 @@ Crea una función en Python que reciba una cadena de texto. Esta función debe c
 """
 
 from os import system
-if system("clear") != 0: system("cls")
+if system("clear") != 0:
+    system("cls")
 
 text = "RRRRJJJjjjrrr"
 
+
 def check_is_balanced(text):
-  text = text.upper()
+    text = text.upper()
 
-  # contar facilmente el número de veces que aparece una letra
-  count_r = text.count("R") # Reed Richards
-  count_j = text.count("J") # Johnny Storm
+    # contar facilmente el número de veces que aparece una letra
+    count_r = text.count("R")  # Reed Richards
+    count_j = text.count("J")  # Johnny Storm
 
-  print(f"count_r: {count_r} count_j: {count_j}")
+    print(f"count_r: {count_r} count_j: {count_j}")
 
-  # if count_r == count_j:
-  #   return True
-  # else:
-  #   return False
+    # if count_r == count_j:
+    #   return True
+    # else:
+    #   return False
 
-  return count_r == count_j
+    return count_r == count_j
+
 
 print(check_is_balanced("RRJJ"))
 print(check_is_balanced("RRRRJJ"))

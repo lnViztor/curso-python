@@ -6,7 +6,7 @@
 # Imprime todos los números pares del 2 al 20 (inclusive) usando un bucle for.
 print("\nEjercicio 1:")
 for numero in range(2, 21, 2):  # range(inicio, fin, paso)
-  print(numero)
+    print(numero)
 
 # Ejercicio 2: Calcular la media de una lista
 # Dada la siguiente lista de números:
@@ -16,7 +16,7 @@ print("\nEjercicio 2:")
 numeros = [10, 20, 30, 40, 50]
 suma = 0
 for numero in numeros:
-  suma += numero
+    suma += numero
 media = suma / len(numeros)
 print(f"La media es: {media}")
 
@@ -28,8 +28,8 @@ print("\nEjercicio 3:")
 numeros = [15, 5, 25, 10, 20]
 maximo = numeros[0]  # Inicializamos con el primer elemento
 for numero in numeros:
-  if numero > maximo:
-    maximo = numero
+    if numero > maximo:
+        maximo = numero
 print(f"El número máximo es: {maximo}")
 
 # Ejercicio 4: Filtrar cadenas por longitud
@@ -49,9 +49,10 @@ print(palabras_largas)
 # Cuenta cuántas palabras en la lista empiezan con esa letra (sin diferenciar mayúsculas/minúsculas).
 print("\nEjercicio 5:")
 palabras = ["casa", "arbol", "sol", "elefante", "luna", "coche"]
-letra = input("Introduce una letra: ").lower()  # Convertimos la letra a minúscula
+# Convertimos la letra a minúscula
+letra = input("Introduce una letra: ").lower()
 contador = 0
 for palabra in palabras:
-  if palabra.lower().startswith(letra):  # Comparamos en minúsculas
-    contador += 1
+    if palabra.lower().startswith(letra):  # Comparamos en minúsculas
+        contador += 1
 print(f"Hay {contador} palabras que empiezan con la letra {letra}")
