@@ -77,7 +77,7 @@ except requests.exceptions.RequestException as e:
 # Usar la API de GPT-4o de OpenAI
 # Ref: https://platform.openai.com/docs/api-reference/making-requests
 
-OPENAI_KEY = "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"
+OPENAI_KEY = "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 
 def call_openai_gpt(api_key, prompt):
