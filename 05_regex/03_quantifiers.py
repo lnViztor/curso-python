@@ -1,3 +1,19 @@
+# pylint: disable=W0311
+# pylint: disable=W0120
+# pylint: disable=W0120
+# pylint: disable=C0103
+# pylint: disable=C0321
+# pylint: disable=C0301
+# pylint: disable=C0114
+# pylint: disable=C0304
+# pylint: disable=C0303
+# pylint: disable=C2401
+# pylint: disable=C0116
+# pylint: disable=W0621
+# pylint: disable=C0413
+# pylint: disable=W0105
+# pylint: disable=C0325
+
 ###
 # 03 - Quantifiers
 # Los cuantificadores se utilizan para especificar cuántas ocurrencias de un carácter o grupo de caracteres se deben encontrar en una cadena.
@@ -11,8 +27,8 @@ pattern = "a*"
 matches = re.findall(pattern, text)
 print(matches)
 
-# Ejercicio 1:
-# ¿Cuantas palabras tienen de 0 a más "a" y después una b?
+#  Ejercicio 1:
+#  ¿Cuantas palabras tienen de 0 a más "a" y después una b?
 
 # +: Una a más veces
 text = "dddd aaa ccc a bb aa casa"
@@ -49,9 +65,16 @@ pattern = r"\b\w{4,6}\b"
 matches = re.findall(pattern, words)
 print(matches)
 
-# Ejercicio
+#  Ejercicio
 # Encuentra las palabras de más de 6 letras
 words = "ala fantastico casa árbol león cinco murcielago"
 pattern = r"\b\w{6,}\b"
-matches = re.findall(pattern, words)
+matches = re.findall(pattern, words, re.UNICODE)
+# Imprime las palabras encontradas
+print(matches)
+
+
+words = "ala fantastico casa árbol león cinco murcielago"
+pattern = r"\b\w{7,}\b"
+matches = re.findall(pattern, words, flags=re.UNICODE)
 print(matches)

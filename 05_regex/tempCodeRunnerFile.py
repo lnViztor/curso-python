@@ -1,10 +1,9 @@
 import re
-text = "Hola mundo, H0la de nuevo, H$la otra vez"
-pattern = r"H.la"  # Hola, H0la, H$la
-
-found = re.findall(pattern, text)
-
-if (found):
-    print(found)
+#text="michael@gov.co.uk"
+text="lo.que+sea@shopping.online"
+pattern = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+match = re.search(pattern, text)
+if match:
+    print("El correo electrónico es válido: ", match.group())
 else:
-    print("No se ha encontrado el patrón")
+    print("El correo electrónico no es válido", )
